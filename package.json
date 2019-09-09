@@ -1,11 +1,11 @@
 {
-  "name": "hdf5",
+  "name": "@romgrk/hdf5",
   "version": "0.3.5",
   "description": "Native Abstractions for hdf5 file io",
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HDF-NI/hdf5.node.git"
+    "url": "https://github.com/romgrk/hdf5.node.git"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -21,12 +21,13 @@
   },
   "contributors": [
     "Ryan Cole <ryan@rycole.com> (https://github.com/ryancole/)",
-    "Roger I Martin <mathmldashx@yahoo.com> (https://github.com/rimmartin/)"
+    "Roger I Martin <mathmldashx@yahoo.com> (https://github.com/rimmartin/)",
+    "Romain Grégoire <romgrk.cc@gmail.com> (https://github.com/romgrk/)"
   ],
   "license": "MIT",
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/HDF-NI/hdf5.node/issues"
+    "url": "https://github.com/romgrk/hdf5.node/issues"
   },
   "dependencies": {
     "nan": "^2.14.0"
