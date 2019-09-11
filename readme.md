@@ -3,12 +3,45 @@
 [![Node.js Version][node-version-image]][node-version-url]
 [![Build Status][travis-ci-build-image]][travis-ci-build-url]
 
-HDF5 is a node module for reading and writing the 
-[HDF5](https://www.hdfgroup.org/HDF5/) file format.
+This if a fork of the official [hdf5](https://www.npmjs.com/package/hdf5) module, with more complete bindings
+and less foot-shooting capabilities.
 
 ## Documentation
 
-API documentation is available at <http://hdf-ni.github.io/hdf5.node>
+API documentation is available at <http://hdf-ni.github.io/hdf5.node>.
+
+### Differences with the official documentation
+
+#### fileOrGroup.setAttribute(name, value, options?)
+
+To set attributes, the `.setAttribute` method is added to give more options.
+
+| argument | type | comment |
+|-----|-----|-----|
+|name|`string`| Name of the attribute |
+|value|`any`| Value of the attribute |
+|options?|`{ padding: Number }`| If `value` is a string, sets the string-padding of the type |
+
+#### file.close()
+
+Will throw an error if there are still open groups, as it would cause bugs further down the road not to close them.
+
+#### h5lt.makeDataset(parentId, name, values, options)
+
+This method is extended to allow creation of more complex string-types, with ranks > 1.
+
+| argument | type | comment |
+|-----|-----|-----|
+|parentId|`Number`| Id of the parent group or file |
+|name|`string`| Name of the dataset |
+|values|`Array|Buffer`| Values |
+|options?|`Object`| Optional parameters |
+|options.fixedSize|`boolean`| If `values` is an array of string, will be stored as fixed-size strings |
+|options.padding|`Number`| If `values` is an array of string, sets the string-padding of the type |
+
+(Only the differences with the official doc are listed here)
+
+## Installation
 
 ```bash
 npm install hdf5
@@ -133,13 +166,12 @@ The h5im namespace is being designed to meet the Image Spec 1.2 <http://www.hdfg
 of images can now be read.
 
 ## Contributors
+
 * Christian Nienhaus ([@NINI1988](https://github.com/NINI1988)) added typescript definitions and many pull requests and bug fixes for hdf5 native calls.
 * John Shumway ([@shumway](https://github.com/shumway)) refurbished the documentation when the project was split into an organization.
 
-[npm-image]: https://badge.fury.io/js/hdf5.svg
-[npm-url]: https://www.npmjs.com/package/hdf5
-[downloads-image]: https://img.shields.io/npm/dm/hdf5.svg
-[node-version-image]: https://img.shields.io/node/v/hdf5.svg
+[npm-image]: https://badge.fury.io/js/@romgrk/hdf5.svg
+[npm-url]: https://www.npmjs.com/package/@romgrk/hdf5
+[downloads-image]: https://img.shields.io/npm/dm/@romgrk/hdf5.svg
+[node-version-image]: https://img.shields.io/node/v/@romgrk/hdf5.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-ci-build-image]: https://travis-ci.org/HDF-NI/hdf5.node.svg?branch=master
-[travis-ci-build-url]: https://travis-ci.org/HDF-NI/hdf5.node
