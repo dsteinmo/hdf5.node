@@ -1,7 +1,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][travis-ci-build-image]][travis-ci-build-url]
 
 This if a fork of the official [hdf5](https://www.npmjs.com/package/hdf5) module, with more complete bindings
 and less foot-shooting capabilities.
@@ -170,7 +169,7 @@ of images can now be read.
 * Christian Nienhaus ([@NINI1988](https://github.com/NINI1988)) added typescript definitions and many pull requests and bug fixes for hdf5 native calls.
 * John Shumway ([@shumway](https://github.com/shumway)) refurbished the documentation when the project was split into an organization.
 
-[npm-image]: https://badge.fury.io/js/@romgrk/hdf5.svg
+[npm-image]: https://badge.fury.io/js/%40romgrk%2Fhdf5.svg
 [npm-url]: https://www.npmjs.com/package/@romgrk/hdf5
 [downloads-image]: https://img.shields.io/npm/dm/@romgrk/hdf5.svg
 [node-version-image]: https://img.shields.io/node/v/@romgrk/hdf5.svg
